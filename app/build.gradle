@@ -7,6 +7,10 @@ android {
     namespace 'com.uranium.agent'
     compileSdk 34
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         applicationId "com.uranium.agent"
         minSdk 26
