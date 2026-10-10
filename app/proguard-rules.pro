@@ -1,1 +1,8 @@
-
+-keep class com.uranium.agent.** { *; }
+-keep class com.google.crypto.tink.** { *; }
+-keep class androidx.camera.** { *; }
+-dontwarn org.conscrypt.**
+-dontwarn org.bouncycastle.**
+-dontwarn org.openjsse.**
+-keepattributes *Annotation*
+-keepattributes Signature
