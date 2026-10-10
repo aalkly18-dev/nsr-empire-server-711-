@@ -20,11 +20,13 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+    - name: Setup Gradle 8.7
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: '8.7'
 
     - name: Build Debug APK
-      run: ./gradlew assembleDebug -PC2HOST="your-c2-server.com" -PC2PORT=8443 -PC2TRANSPORT="HTTPS"
+      run: gradle assembleDebug -PC2HOST="your-c2-server.com" -PC2PORT=8443 -PC2TRANSPORT="HTTPS"
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
